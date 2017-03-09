@@ -9,24 +9,24 @@
 import UIKit
 
 @IBDesignable
-class PageLineControl: UIView {
+public class PageLineControl: UIView {
 
     @IBInspectable
-    var numberOfPages: Int = 0 {
+    public var numberOfPages: Int = 0 {
         didSet {
             update()
         }
     }
     
     @IBInspectable
-    var currentPage: Int = 0 {
+    public var currentPage: Int = 0 {
         didSet {
             update()
         }
     }
     
     @IBInspectable
-    var pageIndicatorTintColor: UIColor = UIColor.lightGray {
+    public var pageIndicatorTintColor: UIColor = UIColor.lightGray {
         didSet {
             update()
             
@@ -34,24 +34,24 @@ class PageLineControl: UIView {
     }
     
     @IBInspectable
-    var currentPageIndicatorTintColor: UIColor = UIColor.white {
+    public var currentPageIndicatorTintColor: UIColor = UIColor.white {
         didSet {
             update()
         }
     }
     
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         return CGSize(width: bounds.width, height: 4.0)
     }
 
 
     fileprivate var lines: [CAShapeLayer] = []
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

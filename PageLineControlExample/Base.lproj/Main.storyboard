@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="gWs-Sg-sHy">
             <objects>
-                <viewController id="4Ph-2U-WBv" customClass="ViewController" customModule="ProgressLine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Ph-2U-WBv" customClass="ViewController" customModule="PageLineControlExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="diy-Cb-A3t"/>
                         <viewControllerLayoutGuide type="bottom" id="mRe-8o-Y9B"/>
@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZn-x0-hlR" customClass="PageLineControl" customModule="ProgressLine" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZn-x0-hlR" customClass="PageLineControl" customModule="PageLineControlExample" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="4"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -32,7 +32,7 @@
                                     <action selector="stepperValueChanged:" destination="4Ph-2U-WBv" eventType="valueChanged" id="uyu-XX-0JW"/>
                                 </connections>
                             </stepper>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-2t-MFW">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-2t-MFW">
                                 <rect key="frame" x="112" y="32" width="151" height="37"/>
                             </pageControl>
                         </subviews>
