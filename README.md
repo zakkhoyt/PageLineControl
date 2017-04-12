@@ -13,7 +13,7 @@ This pod is not yet in the Cocoapods trunk, but you can install by specifying a 
 
 platform :ios, '9.0'
 use_frameworks!
-pod 'PageLineControl', :git => 'https://github.com/zakkhoyt/PageLineControl', :branch => '1.0.0'
+pod 'PageLineControl', :git => 'https://github.com/zakkhoyt/PageLineControl', :branch => '1.0.2'
 
 
 ````
