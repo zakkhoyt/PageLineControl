@@ -15,4 +15,6 @@ use_frameworks!
 pod 'PageLineControl', :git => 'https://github.com/zakkhoyt/PageLineControl', :branch => '1.0.2'
 ````
 
-### Source. Simply copy the file PageLineControl.swift into your workspace
+### Source. 
+
+Copy the single file PageLineControl/PageLineControl.swift into your project.
