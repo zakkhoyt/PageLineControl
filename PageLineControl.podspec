@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "PageLineControl"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "A line style page control with a very similar API to UIPageControl."
   s.author        = { "Zakk Hoyt" => "vaporwarewolf@gmail.com" }
   s.homepage      = "http://github.com/zakkhoyt/PageLineControl"
