@@ -18,3 +18,7 @@ pod 'PageLineControl', :git => 'https://github.com/zakkhoyt/PageLineControl', :b
 ### Source. 
 
 Copy the single file PageLineControl/PageLineControl.swift into your project.
+
+### Example
+
+Clone this repository and then open PageLineControlExample.xcworkspace.
