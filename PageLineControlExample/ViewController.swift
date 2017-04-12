@@ -10,24 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var pageLineControl: PageLineControl!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var stepper: UIStepper!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        pageLineControl.numberOfPages = pageControl.numberOfPages
-        pageLineControl.currentPage = pageControl.currentPage
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
@@ -35,5 +23,8 @@ class ViewController: UIViewController {
         pageLineControl.currentPage = Int(sender.value)
     }
     
+    @IBAction func cumulativeSwitchValueChanged(_ sender: UISwitch) {
+        pageLineControl.cumulative = sender.isOn
+    }
 }
 

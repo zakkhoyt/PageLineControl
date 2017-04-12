@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ph-2U-WBv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ph-2U-WBv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,34 +22,84 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZn-x0-hlR" customClass="PageLineControl" customModule="PageLineControlExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="4"/>
+                                <rect key="frame" x="0.0" y="49" width="375" height="4"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentPage">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="cXr-e4-LeF">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="cXr-e4-LeF">
                                 <rect key="frame" x="140" y="618" width="94" height="29"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="stepperValueChanged:" destination="4Ph-2U-WBv" eventType="valueChanged" id="uyu-XX-0JW"/>
                                 </connections>
                             </stepper>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-2t-MFW">
-                                <rect key="frame" x="112" y="32" width="151" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-2t-MFW">
+                                <rect key="frame" x="144" y="102" width="87" height="37"/>
                             </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PageLineControl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTe-Yd-bRC">
+                                <rect key="frame" x="124" y="20" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIPageControl" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-u1-tE2">
+                                <rect key="frame" x="132" y="73" width="111" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W41-F1-rfp">
+                                <rect key="frame" x="136" y="589" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qPu-Jj-tQ0">
+                                <rect key="frame" x="163" y="538" width="51" height="31"/>
+                                <connections>
+                                    <action selector="cumulativeSwitchValueChanged:" destination="4Ph-2U-WBv" eventType="valueChanged" id="FRS-cU-HVY"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cumulative" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDv-Y6-OxU">
+                                <rect key="frame" x="144" y="509" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bZn-x0-hlR" firstAttribute="top" secondItem="diy-Cb-A3t" secondAttribute="bottom" id="9M9-IO-PhO"/>
-                            <constraint firstItem="8Z8-2t-MFW" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="E4I-ol-5w4"/>
+                            <constraint firstItem="W41-F1-rfp" firstAttribute="top" secondItem="qPu-Jj-tQ0" secondAttribute="bottom" constant="20" id="0TF-ux-xR1"/>
+                            <constraint firstItem="qPu-Jj-tQ0" firstAttribute="top" secondItem="uDv-Y6-OxU" secondAttribute="bottom" constant="8" id="2Rn-MK-GHK"/>
+                            <constraint firstItem="pGZ-u1-tE2" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="80I-rR-Ps3"/>
+                            <constraint firstItem="pGZ-u1-tE2" firstAttribute="top" secondItem="bZn-x0-hlR" secondAttribute="bottom" constant="20" id="99W-rh-wgy"/>
+                            <constraint firstAttribute="trailing" secondItem="bZn-x0-hlR" secondAttribute="trailing" id="H6M-kh-UYe"/>
                             <constraint firstItem="mRe-8o-Y9B" firstAttribute="top" secondItem="cXr-e4-LeF" secondAttribute="bottom" constant="20" id="HDX-qt-AY6"/>
+                            <constraint firstItem="qPu-Jj-tQ0" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="HmX-V1-07W"/>
                             <constraint firstItem="cXr-e4-LeF" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="LGk-kf-ob1"/>
-                            <constraint firstAttribute="trailing" secondItem="bZn-x0-hlR" secondAttribute="trailing" id="MqF-ts-D6l"/>
-                            <constraint firstItem="8Z8-2t-MFW" firstAttribute="top" secondItem="bZn-x0-hlR" secondAttribute="bottom" constant="8" id="dt7-Tl-StR"/>
-                            <constraint firstItem="bZn-x0-hlR" firstAttribute="leading" secondItem="7yO-Ai-1wh" secondAttribute="leading" id="i0C-QN-8Th"/>
+                            <constraint firstItem="8Z8-2t-MFW" firstAttribute="top" secondItem="pGZ-u1-tE2" secondAttribute="bottom" constant="8" id="Mj9-fZ-hP4"/>
+                            <constraint firstItem="W41-F1-rfp" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="NYX-Kv-o54"/>
+                            <constraint firstItem="bZn-x0-hlR" firstAttribute="leading" secondItem="7yO-Ai-1wh" secondAttribute="leading" id="Q7Y-hn-Nh7"/>
+                            <constraint firstItem="8Z8-2t-MFW" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="UXg-FK-BJY"/>
+                            <constraint firstItem="uDv-Y6-OxU" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="bSc-iR-Ka4"/>
+                            <constraint firstItem="cXr-e4-LeF" firstAttribute="top" secondItem="W41-F1-rfp" secondAttribute="bottom" constant="8" id="fjC-Z8-SyZ"/>
+                            <constraint firstItem="yTe-Yd-bRC" firstAttribute="centerX" secondItem="7yO-Ai-1wh" secondAttribute="centerX" id="jhq-K9-ehn"/>
+                            <constraint firstItem="bZn-x0-hlR" firstAttribute="top" secondItem="yTe-Yd-bRC" secondAttribute="bottom" constant="8" id="uIN-h9-kOa"/>
+                            <constraint firstItem="yTe-Yd-bRC" firstAttribute="top" secondItem="diy-Cb-A3t" secondAttribute="bottom" constant="20" id="xXQ-2h-eS3"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="pageControl" destination="8Z8-2t-MFW" id="Rr6-Nz-jXz"/>
                         <outlet property="pageLineControl" destination="bZn-x0-hlR" id="z2Z-6g-oXD"/>
+                        <outlet property="stepper" destination="cXr-e4-LeF" id="oLb-l0-fmQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zM-Y5-SRS" sceneMemberID="firstResponder"/>
